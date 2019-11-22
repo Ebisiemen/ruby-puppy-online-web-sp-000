@@ -1,4 +1,3 @@
-require 'pry'
 class Dog 
   
   attr_accessor :name 
@@ -8,26 +7,147 @@ class Dog
   def initialize(name)
     @name = name 
     @@all << self 
-    save
-  end   
+  end 
   
   def self.all 
     @@all 
   end   
   
   def self.clear_all
-    @@all.clear 
+    @@all = []
   end   
   
-  def self.print_all 
-    puts @@all.map{ |dog| dog.name } 
+  def self.print_all
+    @@all.each{|dog| puts dog.name}
   end   
   
-  def save 
-    # binding.pry 
-   if !@@all.include?(self) 
-    # else 
-      @@all << self 
-    end   
-  end   
 end   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# class Dog 
+  
+#   attr_accessor :name 
+  
+#   @@all = []
+   
+#   def initialize(name)
+#     @name = name 
+#     @@all << self 
+#     save 
+#   end   
+  
+#   def self.all 
+#     @@all 
+#   end   
+  
+#   def self.clear_all
+#     @@all = []
+#   end   
+  
+#   def self.print_all
+#     @@all.map{|dog| puts dog.name} 
+#   end 
+  
+# def save 
+#   if !@@all.include?(self) 
+#       @@all << self 
+#     end   
+#   end   
+# end   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# # require 'pry'
+# # class Dog 
+  
+# #   attr_accessor :name 
+  
+# #   @@all = []
+  
+# #   def initialize(name)
+# #     @name = name 
+# #     @@all << self 
+# #     save
+# #   end   
+  
+# #   def self.all 
+# #     @@all 
+# #   end   
+  
+# #   def self.clear_all
+# #     @@all.clear 
+# #   end   
+  
+# #   def self.print_all 
+# #     puts @@all.map{ |dog| dog.name } 
+# #   end   
+  
+# #   def save 
+# #     # binding.pry 
+# #   if !@@all.include?(self) 
+# #     # else 
+# #       @@all << self 
+# #     end   
+# #   end   
+# # end   
